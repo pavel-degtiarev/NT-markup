@@ -1,0 +1,53 @@
+@use "../variables.scss" as var;
+
+.trip-info__header {
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+
+  @media screen and (min-width:var.$desktopSize) {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+
+.trip-info__title {
+  color: var.$grayDark;
+  font-weight: var.$fontBold;
+  font-size: var.$textSizeNormalSM;
+  line-height: 22px;
+
+  @media screen and (min-width:var.$desktopSize) {
+    flex-direction: column;
+
+    font-size: var.$textSizeBigX;
+    font-weight: var.$fontRegular;
+    line-height: 34px;
+
+    color: #000;
+  }
+}
+
+.trip-info__duration {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var.$grayLight;
+  font-size: var.$textSizeSmallSM;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("assets/icons/clock-circular-outline.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width:var.$desktopSize) {
+    font-size: var.$textSizeSmallX;
+  }
+}

@@ -1,0 +1,59 @@
+@use "../variables.scss" as var;
+
+.trip-details {
+  margin-top: 20px;
+  padding: 0 12px;
+  list-style: none;
+
+  @media screen and (min-width:var.$desktopSize) {
+    margin-top: 10px;
+    padding: 0 20px;
+  }
+}
+
+.trip-details__item {
+  position: relative;
+  color: var.$grayDark;
+  font-size: var.$textSizeNormalSM;
+  line-height: 20px;
+
+  padding-left: 32px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+    background-image: url("assets/icons/check-mark.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width:var.$desktopSize) {
+    font-size: var.$textSizeNormalX;
+  }
+}
+
+.details-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  @media screen and (min-width:var.$desktopSizeX) {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.details-item__text {
+  min-width: fit-content;
+}

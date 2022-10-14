@@ -1,0 +1,27 @@
+@use "./variables.scss" as var;
+
+.container {
+  width: 100vw;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 26px 17px;
+
+  @media screen and (min-width:var.$desktopSize) {
+    padding: 0 60px;
+    margin: 60px auto;
+  }
+  
+  @media screen and (min-width:var.$desktopSizeXL) {
+    padding: 0;
+  }
+}
+
+.trip-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trip-item:not(:first-child) {
+  margin-top: 30px;
+}

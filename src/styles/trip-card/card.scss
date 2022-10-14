@@ -1,0 +1,50 @@
+@use "../variables.scss" as var;
+
+.trip-card {
+  position: relative;
+}
+
+.trip-card__content {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: var.$borderRadius;
+  border: 0.3px solid var.$grayLight;
+  overflow: hidden;
+
+  @media screen and (min-width:var.$desktopSize) {
+    flex-direction: row;
+  }
+}
+
+.trip-card__image {
+
+  & picture {
+    width: 100%;
+    max-height: 370px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  & img {
+    min-width: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width:var.$desktopSize) {
+    max-width: 50%;
+
+    & picture {
+      height: 100%;
+      max-height: unset;
+    }
+  }
+}
+
+.trip-info {
+  padding: 14px 0 20px;
+
+  @media screen and (min-width:var.$desktopSize) {
+    padding: 25px 0 25px;
+  }
+}

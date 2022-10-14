@@ -1,0 +1,16 @@
+@media (max-width: 500px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  td {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  tr:not(:last-child) td,
+  tr:last-child td:not(:last-child) {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,34 @@
+@use "../variables.scss" as var;
+
+.tagged:before,
+.tagged-alt:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 20px;
+  content: attr(data-tag);
+  font-size: var.$textSizeSmallSM;
+
+  @media screen and (min-width:var.$desktopSize) {
+    font-size: var.$textSizeNormalX;
+  }
+}
+
+.tagged:before {
+  transform: translateY(100%);
+  color: #000;
+  background-color: var.$orangeLight;
+}
+
+.tagged-alt:before {
+  color: #FFF;
+  background-color: var.$blueDark;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 16px;
+
+  @media screen and (min-width:var.$desktopSize) {
+    transform: translateY(100%);
+    font-size: var.$textSizeNormalX;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,113 @@
+@use "../variables.scss" as var;
+
+.trip-info__footer {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.trip-prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.trip-prices__main,
+.trip-prices__onpierce,
+.onpierce-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.trip-prices__main::after,
+.onpierce-price::after {
+  display: block;
+  content: "";
+  background-image: url("assets/icons/ruble-currency-sign.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.trip-prices__main {
+  gap: 6px;
+
+  font-size: 30px;
+  line-height: 20px;
+  color: #000;
+
+  &::after {
+    width: 19px;
+    height: 23px;
+  }
+
+  @media screen and (min-width:var.$desktopSize) {
+    font-size: 36px;
+
+    &::after {
+      height: 26px;
+    }
+  }
+}
+
+.trip-prices__onpierce {
+  gap: 3px;
+
+  font-size: 10px;
+  color: #000;
+
+  @media screen and (min-width:var.$desktopSize) {
+    font-size: var.$textSizeSmallX;
+  }
+}
+
+.onpierce-price {
+  gap: 3px;
+
+  &::after {
+    width: 6px;
+    height: 8px;
+  }
+
+  @media screen and (min-width:var.$desktopSize) {
+    &::after {
+      width: 8px;
+      height: 10px;
+    }
+  }
+}
+
+.trip-info__more-info {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  height: 44px;
+  border-radius: 22px;
+
+  color: var.$grayDark;
+  background-color: var.$orangeLight;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: var.$orangeDark;
+  }
+
+  @media screen and (min-width:var.$desktopSize) {
+    height: 52px;
+    border-radius: 26px;
+    font-size: var.$textSizeNormalX;
+    padding: 0 45px;
+    max-width: fit-content;
+  }
+}

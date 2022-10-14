@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <title>Layout test task</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <!-- Список с карточками -->
+        <ul class="trip-list">
+
+          <!-- Карточка 1 -->
+          <li class="trip-list__item trip-item">
+            <article class="trip-item__card trip-card tagged" data-tag="НОВИНКА">
+              <div class="trip-card__content">
+
+                <!-- Фотография на карточке -->
+                <div class="trip-card__image">
+                  <picture>
+                    <source
+                      media="(min-width: 500px)" width="469" type="image/webp"
+                      srcset="assets/trip-1-big.webp 1x, assets/trip-1-big@2x.webp 2x" />
+                    <source
+                      media="(min-width: 500px)" width="469" type="image/jpeg"
+                      srcset="assets/trip-1-big.jpg 1x, assets/trip-1-big@2x.jpg 2x" />
+                    <source
+                      media="(max-width: 499px)" width="356" type="image/webp"
+                      srcset="assets/trip-1.webp 1x, assets/trip-1@2x.webp 2x" />
+                    <source
+                      media="(max-width: 499px)" width="356" type="image/jpeg"
+                      srcset="assets/trip-1.jpg 1x, assets/trip-1@2x.jpg 2x" />
+
+                    <img
+                      src="assets/trip-1.jpg" alt="Биржевой мост"
+                      width="356" height="280"
+                      srcset="assets/trip-1.jpg 1x, assets/trip-1@2x.jpg 2x" />
+                  </picture>
+                </div>
+
+                <!-- Информация о поездке -->
+                <div class="trip-card__info trip-info">
+                  <!-- Шапка -->
+                  <header class="trip-info__header">
+                    <h3 class="trip-info__title">
+                      АКЦИЯ - Обзорная экскурсия по рекам и каналам c остановками Hop on Hop Off
+                      2019
+                    </h3>
+                    <p class="trip-info__duration">2 часа</p>
+                  </header>
+
+                  <!-- Подробности -->
+                  <ul class="trip-info__details trip-details">
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Билет на целый день</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Неограниченное число катаний</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">6 остановок у главных достопримечательностей</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Ближайший рейс сегодня</span>
+
+                      <!-- Время отправления -->
+                      <!--  overflow overflow-hidden -->
+                      <fieldset class="trip-details__schedule trip-schedule">
+                        <div class="trip-schedule__items">
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-1-schedule"
+                              id="trip-1-time-1" value="8:00" />
+                            <label class="trip-schedule__tag" for="trip-1-time-1">8:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-1-schedule"
+                              id="trip-1-time-2" value="10:00"
+                              checked />
+                            <label class="trip-schedule__tag" for="trip-1-time-2">10:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-1-schedule"
+                              id="trip-1-time-3" value="12:00" />
+                            <label class="trip-schedule__tag" for="trip-1-time-3">12:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-1-schedule"
+                              id="trip-1-time-4" value="14:00" />
+                            <label class="trip-schedule__tag" for="trip-1-time-4">14:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-1-schedule"
+                              id="trip-1-time-5" value="16:00" />
+                            <label class="trip-schedule__tag" for="trip-1-time-5">16:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-1-schedule"
+                              id="trip-1-time-6" value="18:00" />
+                            <label class="trip-schedule__tag" for="trip-1-time-6">18:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-1-schedule"
+                              id="trip-1-time-7" value="20:00" />
+                            <label class="trip-schedule__tag" for="trip-1-time-7">20:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-1-schedule"
+                              id="trip-1-time-8" value="22:00" />
+                            <label class="trip-schedule__tag" for="trip-1-time-8">22:00</label>
+                          </div>
+                        </div>
+
+                        <button class="trip-schedule__tag trip-schedule__more">еще...</button>
+                      </fieldset>
+                    </li>
+                  </ul>
+
+                  <!-- Подвал карточки -->
+                  <footer class="trip-info__footer">
+                    <!-- Ценник -->
+                    <div class="trip-info__prices trip-prices">
+                      <p class="trip-prices__main">1900</p>
+                      <p class="trip-prices__onpierce">
+                        <span class="onpierce-price">1200</span> на причале
+                      </p>
+                    </div>
+
+                    <button class="trip-info__more-info">Подробнее</button>
+                  </footer>
+                </div>
+              </div>
+            </article>
+          </li>
+          <!-- Конец карточки -->
+
+          <!-- Карточка 2 -->
+          <li class="trip-list__item trip-item">
+            <article class="trip-item__card trip-card tagged" data-tag="НОВИНКА">
+              <div class="trip-card__content">
+
+                <!-- Фотография на карточке -->
+                <div class="trip-card__image">
+                  <picture>
+                    <source
+                      media="(min-width: 500px)" width="469" type="image/webp"
+                      srcset="assets/trip-2-big.webp 1x, assets/trip-2-big@2x.webp 2x" />
+                    <source
+                      media="(min-width: 500px)" width="469" type="image/jpeg"
+                      srcset="assets/trip-2-big.jpg 1x, assets/trip-2-big@2x.jpg 2x" />
+                    <source
+                      media="(max-width: 499px)" width="356" type="image/webp"
+                      srcset="assets/trip-2.webp 1x, assets/trip-2@2x.webp 2x" />
+                    <source
+                      media="(max-width: 499px)" width="356" type="image/jpeg"
+                      srcset="assets/trip-2.jpg 1x, assets/trip-2@2x.jpg 2x" />
+
+                    <img
+                      src="assets/trip-2.jpg" alt="Храм Спаса на крови"
+                      width="356" height="280"
+                      srcset="assets/trip-2.jpg 1x, assets/trip-2@2x.jpg 2x" />
+                  </picture>
+                </div>
+
+                <!-- Информация о поездке -->
+                <div class="trip-card__info trip-info">
+                  <!-- Шапка -->
+                  <header class="trip-info__header">
+                    <h3 class="trip-info__title">
+                      АКЦИЯ - Обзорная экскурсия по рекам и каналам c остановками Hop on Hop Off
+                      2019
+                    </h3>
+                    <p class="trip-info__duration">2 часа</p>
+                  </header>
+
+                  <!-- Подробности -->
+                  <ul class="trip-info__details trip-details">
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Билет на целый день</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Неограниченное число катаний</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">6 остановок у главных достопримечательностей</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Ближайший рейс сегодня</span>
+
+                      <!-- Время отправления -->
+                      <fieldset class="trip-details__schedule trip-schedule">
+                        <div class="trip-schedule__items">
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-2-schedule"
+                              id="trip-2-time-1" value="10:00" />
+                            <label class="trip-schedule__tag" for="trip-2-time-1">10:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-2-schedule"
+                              id="trip-2-time-2" value="14:00"
+                              checked />
+                            <label class="trip-schedule__tag" for="trip-2-time-2">14:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-2-schedule"
+                              id="trip-2-time-3" value="18:00" />
+                            <label class="trip-schedule__tag" for="trip-2-time-3">18:00</label>
+                          </div>
+                        </div>
+
+                        <button class="trip-schedule__tag trip-schedule__more">еще...</button>
+                      </fieldset>
+                    </li>
+                  </ul>
+
+                  <!-- Подвал карточки -->
+                  <footer class="trip-info__footer">
+                    <!-- Ценник -->
+                    <div class="trip-info__prices trip-prices">
+                      <p class="trip-prices__main">1900</p>
+                      <p class="trip-prices__onpierce">
+                        <span class="onpierce-price">1200</span> на причале
+                      </p>
+                    </div>
+
+                    <button class="trip-info__more-info">Подробнее</button>
+                  </footer>
+                </div>
+              </div>
+            </article>
+          </li>
+          <!-- Конец карточки -->
+
+
+          <!-- Карточка 3 -->
+          <li class="trip-list__item trip-item">
+            <article class="trip-item__card trip-card tagged" data-tag="НОВИНКА">
+              <div class="trip-card__content">
+
+                <!-- Фотография на карточке -->
+                <div class="trip-card__image">
+                  <picture>
+                    <source
+                      media="(min-width: 500px)" width="469" type="image/webp"
+                      srcset="assets/trip-3-big.webp 1x, assets/trip-3-big@2x.webp 2x" />
+                    <source
+                      media="(min-width: 500px)" width="469" type="image/jpeg"
+                      srcset="assets/trip-3-big.jpg 1x, assets/trip-3-big@2x.jpg 2x" />
+                    <source
+                      media="(max-width: 499px)" width="356" type="image/webp"
+                      srcset="assets/trip-3.webp 1x, assets/trip-3@2x.webp 2x" />
+                    <source
+                      media="(max-width: 499px)" width="356" type="image/jpeg"
+                      srcset="assets/trip-3.jpg 1x, assets/trip-3@2x.jpg 2x" />
+
+                    <img
+                      src="assets/trip-3.jpg" alt="Пианино"
+                      width="356" height="280"
+                      srcset="assets/trip-3.jpg 1x, assets/trip-3@2x.jpg 2x" />
+                  </picture>
+                </div>
+
+                <!-- Информация о поездке -->
+                <div class="trip-card__info trip-info">
+                  <!-- Шапка -->
+                  <header class="trip-info__header">
+                    <h3 class="trip-info__title">
+                      АКЦИЯ - Обзорная экскурсия по рекам и каналам c остановками Hop on Hop Off
+                      2019
+                    </h3>
+                    <p class="trip-info__duration">2 часа</p>
+                  </header>
+
+                  <!-- Подробности -->
+                  <ul class="trip-info__details trip-details">
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Билет на целый день</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Неограниченное число катаний</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">6 остановок у главных достопримечательностей</span></li>
+                    <li class="trip-details__item details-item">
+                      <span class="details-item__text">Ближайший рейс сегодня</span>
+
+                      <!-- Время отправления -->
+                      <fieldset class="trip-details__schedule trip-schedule">
+                        <div class="trip-schedule__items">
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-3-schedule"
+                              id="trip-3-time-1" value="8:00" />
+                            <label class="trip-schedule__tag" for="trip-3-time-1">8:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-3-schedule"
+                              id="trip-3-time-2" value="10:00"
+                              checked />
+                            <label class="trip-schedule__tag" for="trip-3-time-2">10:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-3-schedule"
+                              id="trip-3-time-3" value="12:00" />
+                            <label class="trip-schedule__tag" for="trip-3-time-3">12:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-3-schedule"
+                              id="trip-3-time-4" value="14:00" />
+                            <label class="trip-schedule__tag" for="trip-3-time-4">14:00</label>
+                          </div>
+
+                          <div class="trip-schedule__item">
+                            <input class="hidden" type="radio" name="trip-3-schedule"
+                              id="trip-3-time-5" value="16:00" />
+                            <label class="trip-schedule__tag" for="trip-3-time-5">16:00</label>
+                          </div>
+                        </div>
+
+                        <button class="trip-schedule__tag trip-schedule__more">еще...</button>
+                        
+                      </fieldset>
+                    </li>
+                  </ul>
+
+                  <!-- Подвал карточки -->
+                  <footer class="trip-info__footer">
+                    <!-- Ценник -->
+                    <div class="trip-info__prices trip-prices">
+                      <p class="trip-prices__main">1900</p>
+                      <p class="trip-prices__onpierce">
+                        <span class="onpierce-price">1200</span> на причале
+                      </p>
+                    </div>
+
+                    <button class="trip-info__more-info">Подробнее</button>
+                  </footer>
+                </div>
+              </div>
+            </article>
+          </li>
+          <!-- Конец карточки -->
+
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
